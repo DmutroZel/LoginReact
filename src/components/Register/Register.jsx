@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Register.css';
 import useStore from '../../store';
 
-// Компонент форми реєстрації
+
 export default function Register({ switchToLogin }) {
-  // Стан для полів форми та повідомлень
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -12,7 +12,7 @@ export default function Register({ switchToLogin }) {
   const [isLoading, setIsLoading] = useState(false);
   const { register } = useStore();
 
-  // Обробка реєстрації: перевірка полів і виклик функції з магазину
+  // Обробка реєстрації перевірка полів і виклик функції з магазину
   const handleRegister = async () => {
     if (!username.trim() || !password.trim() || !name.trim()) return setMessage('Заповніть усі поля!');
     if (password.length < 3) return setMessage('Пароль має бути від 3 символів!');

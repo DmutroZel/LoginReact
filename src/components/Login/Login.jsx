@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './login.css';
+import './Login.css';
 import useStore from '../../store';
 
-// Компонент форми входу
+
 export default function Login({ switchToRegister }) {
   // Стан для полів форми та повідомлень
   const [loginInput, setLoginInput] = useState('');
